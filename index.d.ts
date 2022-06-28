@@ -50,6 +50,8 @@ export interface Options {
 	@default false
 	*/
 	verbose?: boolean;
+
+	path?: string;
 }
 
 /**
