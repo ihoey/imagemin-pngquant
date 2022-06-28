@@ -2,7 +2,7 @@
 const execa = require('execa');
 const isPng = require('is-png');
 const isStream = require('is-stream');
-const pngquant = require('pngquant-bin');
+// const pngquant = require('pngquant-bin');
 const ow = require('ow');
 
 const imageminPngquant = (options = {}) => input => {
@@ -57,7 +57,7 @@ const imageminPngquant = (options = {}) => input => {
 		args.push('--verbose');
 	}
 
-	const subprocess = execa(pngquant, args, {
+	const subprocess = execa(options.path, args, {
 		encoding: null,
 		maxBuffer: Infinity,
 		input
